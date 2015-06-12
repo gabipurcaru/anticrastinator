@@ -5,7 +5,7 @@ var FILE = __dirname + '/updater.js';
 
 var command = process.argv[2];
 if(['start', 'stop', 'status'].indexOf(command) === -1) {
-  command = 'start';
+  command = 'status';
 }
 if(command == 'start') {
   forever.startDaemon(FILE);
