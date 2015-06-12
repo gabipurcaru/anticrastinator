@@ -1,0 +1,21 @@
+{
+  "name": "anticrastinator",
+  "version": "0.0.0",
+  "description": "Prevents you from procrastinating.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "procrastinate",
+    "daemon",
+    "hosts"
+  ],
+  "author": "Gabi Purcaru",
+  "license": "MIT",
+  "dependencies": {
+    "forever": "^0.14.1",
+    "lodash": "^3.9.3",
+    "moment": "^2.10.3"
+  }
+}
