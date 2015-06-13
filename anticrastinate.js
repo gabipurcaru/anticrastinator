@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 var forever = require('forever');
 var _ = require('lodash');
 
@@ -7,6 +9,13 @@ var command = process.argv[2];
 if(['start', 'stop', 'status'].indexOf(command) === -1) {
   command = 'status';
 }
+
+// if is not root, show an error and exit
+if(['start', 'stop'].indexOf(command) !== -1 && process.getuid() !== 0) {
+  console.error("You need to run this command with sudo.");
+  process.exit(-1);
+}
+
 if(command == 'start') {
   forever.startDaemon(FILE);
 } else if(command == 'status') {
