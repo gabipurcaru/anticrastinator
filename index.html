@@ -47,14 +47,24 @@ $ sudo anticrastinator start</pre></div>
 <p>Now you can edit your <code>/etc/hosts</code> file like shown above.</p>
 
 <h3>
-<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h3>
 
-<p><a href="https://github.com/gabipurcaru" class="user-mention">@gabipurcaru</a></p>
+<p>Edit your <code>/etc/hosts</code> file and add one or more lines that look like this:</p>
+
+<pre><code># anticrastinate: [start_time]-[end_time] -- [website1] [website2]
+</code></pre>
+
+<p>You can also put <code>weekdays</code> or <code>weekends</code> after the time if needed.</p>
+
+<p>For example, to block facebook.com between 9AM and 5PM during weekdays, you can use this:</p>
+
+<pre><code># anticrastinate: 9:00-17:00 -- facebook.com
+</code></pre>
 
 <h3>
-<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+<a id="author" class="anchor" href="#author" aria-hidden="true"><span class="octicon octicon-link"></span></a>Author</h3>
 
-<p><a href="mailto:gabi@purcaru.com">gabi@purcaru.com</a></p>
+<p><a href="https://github.com/gabipurcaru" class="user-mention">@gabipurcaru</a> <a href="mailto:gabi@purcaru.com">gabi@purcaru.com</a></p>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/gabipurcaru/anticrastinator">Anticrastinator</a> is maintained by <a href="https://github.com/gabipurcaru">gabipurcaru</a>.</span>
@@ -64,7 +74,17 @@ $ sudo anticrastinator start</pre></div>
 
     </section>
 
-  
+            <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-64078416-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
   </body>
 </html>
 
