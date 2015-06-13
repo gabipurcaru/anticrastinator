@@ -22,8 +22,20 @@ $ sudo anticrastinator start
 
 Now you can edit your `/etc/hosts` file like shown above.
 
-### Authors and Contributors
-@gabipurcaru
+### Usage
+Edit your `/etc/hosts` file and add one or more lines that look like this:
 
-### Support or Contact
+```
+# anticrastinate: [start_time]-[end_time] -- [website1] [website2]
+```
+
+You can also put `weekdays` or `weekends` after the time if needed.
+
+For example, to block facebook.com between 9AM and 5PM during weekdays, you can use this:
+
+```
+# anticrastinate: 9:00-17:00 -- facebook.com
+```
+
+### Author
 gabi@purcaru.com
