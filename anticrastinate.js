@@ -17,7 +17,7 @@ if(['start', 'stop'].indexOf(command) !== -1 && process.getuid() !== 0) {
 }
 
 if(command == 'start') {
-  forever.startDaemon(FILE);
+  forever.startDaemon(FILE, { killSignal: 'SIGINT' });
 } else if(command == 'status') {
   forever.list(null, function(err, list) {
     var isRunning = (_.filter(list, function(item) {

@@ -100,7 +100,7 @@ var processHostsFile = function() {
     times = _.filter(times, function(time) { return moment().isBefore(time); });
     var nextTime = minTime(times, moment().add(1, 'minute'));
 
-    fs.writeFile('/etc/hosts', output, function(err) {
+    fs.writeFile(HOSTS_FILE, output, function(err) {
       if(err) {
         log.error("Unable to write to file: " + err);
       } else {
@@ -108,13 +108,11 @@ var processHostsFile = function() {
         // schedule a re-check after a set time
         var timeout = setTimeout(function() {
           fs.unwatchFile(HOSTS_FILE);
-          console.log('checking ...');
           processHostsFile();
         }, nextTime.diff(moment()));
 
         // if the file is changed in any way before that, trigger a change
         fs.watchFile(HOSTS_FILE, function() {
-          console.log('change detected!!');
           fs.unwatchFile(HOSTS_FILE);
           clearTimeout(timeout);
           processHostsFile();
@@ -126,3 +124,11 @@ var processHostsFile = function() {
 
 log.info("started");
 processHostsFile();
+
+process.on('SIGINT', function() {
+  log.info("Closing the updater, removing rules.");
+  var data = fs.readFileSync(HOSTS_FILE, { encoding: 'utf8' });
+  data = data.replace(/^.*:anticrastinate.*\n/mg, '');
+  fs.writeFileSync(HOSTS_FILE, data);
+  process.exit();
+});
