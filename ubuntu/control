@@ -1,0 +1,9 @@
+Package: anticrastinator
+Version: 0.0-1
+Section: net
+Priority: optional
+Architecture: all
+Depends: nodejs (>= 0.10)
+Maintainer: Gabi Purcaru <gabi@purcaru.com>
+Description: Anticrastinator
+ Prevents you from procrastinating by blocking some websites on a set of rules

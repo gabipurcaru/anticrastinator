@@ -1,0 +1,5 @@
+#!/bin/sh
+
+/bin/systemctl daemon-reload
+/bin/systemctl start anticrastinatord.service
+/bin/systemctl enable anticrastinatord.service

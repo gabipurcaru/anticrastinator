@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
-sudo git clone https://github.com/gabipurcaru/anticrastinator.git /opt/anticrastinator
+git clone https://github.com/gabipurcaru/anticrastinator.git /opt/anticrastinator
 cd /opt/anticrastinator
-sudo npm install
+npm install
 
-sudo cp /opt/anticrastinator/ubuntu/anticrastinatord.service /etc/systemd/system/anticrastinatord.service
-sudo systemctl daemon-reload
+cp /opt/anticrastinator/ubuntu/anticrastinatord.service /etc/systemd/system/anticrastinatord.service
+systemctl daemon-reload
 
-sudo systemctl enable anticrastinatord
-sudo systemctl start anticrastinatord
+systemctl enable anticrastinatord
+systemctl start anticrastinatord
