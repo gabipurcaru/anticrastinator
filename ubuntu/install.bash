@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-git clone git@github.com:gabipurcaru/anticrastinator.git /opt/anticrastinator
+sudo git clone https://github.com/gabipurcaru/anticrastinator.git /opt/anticrastinator
 cd /opt/anticrastinator
-node install
+sudo npm install
 
-sudo mv /opt/anticrastinator/ubuntu/anticrastinatord.service /etc/systemd/system/anticrastinatord.service
+sudo cp /opt/anticrastinator/ubuntu/anticrastinatord.service /etc/systemd/system/anticrastinatord.service
 sudo systemctl daemon-reload
 
 sudo systemctl enable anticrastinatord

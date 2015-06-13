@@ -1,16 +1,11 @@
 [Unit]
 Description = AntiCrastinator
-After = NetworkManager-wait-online.service network.target network-online.target dbus.service
-Wants = display-manager.service NetworkManager-wait-online.service network-online.target
-Requires = dbus.service
 
 [Service]
-Type = forking
+Type = simple
 PIDFile = /var/run/anticrastinatord.pid
-ExecStart = node /opt/anticrastinator/index start
-Restart = on-abort
-StartLimitInterval = 60
-StartLimitBurst = 10
+TimeoutStartSec = 0
+ExecStart = /usr/bin/node /opt/anticrastinator/updater.js
 
 [Install]
 WantedBy = graphical.target
