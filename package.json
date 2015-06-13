@@ -2,15 +2,19 @@
   "name": "anticrastinator",
   "version": "0.0.0",
   "description": "Prevents you from procrastinating.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "main": "anticrastinate.js",
   "keywords": [
     "procrastinate",
     "daemon",
     "hosts"
   ],
+  "bin": "./anticrastinate.js",
+  "homepage": "http://gabipurcaru.github.io/anticrastinator/",
+  "bugs": {
+    "url": "https://github.com/gabipurcaru/anticrastinator/issues"
+  },
+  "repository": "github:gabipurcaru/anticrastinator",
+  "preferGlobal": true,
   "author": "Gabi Purcaru",
   "license": "MIT",
   "dependencies": {
