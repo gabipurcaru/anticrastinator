@@ -9,7 +9,7 @@ What if there was a way to block some websites while working on really important
 
 #### Ubuntu 14.10 or later
 
-Download this .deb file and run `$ sudo dpkg -i anticrastinator_0.0-1.deb`.
+Download [this .deb file](https://cdn.rawgit.com/gabipurcaru/anticrastinator/master/ubuntu/anticrastinator_0.0-1.deb) and run `$ sudo dpkg -i anticrastinator_0.0-1.deb`.
 
 #### Others
 
