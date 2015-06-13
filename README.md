@@ -34,7 +34,7 @@ You can also put `weekdays` or `weekends` after the time if needed.
 For example, to block facebook.com between 9AM and 5PM during weekdays, you can use this:
 
 ```
-# anticrastinate: 9:00-17:00 -- facebook.com
+# anticrastinate: 9:00-17:00 weekdays -- facebook.com
 ```
 
 ### Author
