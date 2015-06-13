@@ -9,7 +9,7 @@ What if there was a way to block some websites while working on really important
 
 #### Ubuntu 14.10 or later
 
-Download this .deb file and run `$ sudo dpkg -i anticrastinator_0.0-1.deb`.
+Download [this .deb file](https://cdn.rawgit.com/gabipurcaru/anticrastinator/master/ubuntu/anticrastinator_0.0-1.deb) and run `$ sudo dpkg -i anticrastinator_0.0-1.deb`.
 
 #### Others
 
@@ -22,8 +22,20 @@ $ sudo anticrastinator start
 
 Now you can edit your `/etc/hosts` file like shown above.
 
-### Authors and Contributors
-@gabipurcaru
+### Usage
+Edit your `/etc/hosts` file and add one or more lines that look like this:
 
-### Support or Contact
+```
+# anticrastinate: [start_time]-[end_time] -- [website1] [website2]
+```
+
+You can also put `weekdays` or `weekends` after the time if needed.
+
+For example, to block facebook.com between 9AM and 5PM during weekdays, you can use this:
+
+```
+# anticrastinate: 9:00-17:00 weekdays -- facebook.com
+```
+
+### Author
 gabi@purcaru.com
